@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Inscrições - Admissão Digital</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    
+    <link rel="stylesheet" href="css/forms.css"> 
+    <link rel="stylesheet" href="css/status.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo-link">
+                <h1 class="navbar-logo">Admissão Digital</h1>
+            </a>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="minhas_vagas.html" class="active">Minhas Inscrições</a></li>
+                    <li><a href="#notificacoes">Notificações</a></li>
+                    <li><a href="login.html">Perfil</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="minhas-vagas-container">
+            <h1>Minhas Inscrições</h1>
+            <p>Acompanhe o status das vagas para as quais você se candidatou.</p>
+
+            <div class="lista-vagas-aplicadas">
+                
+                <article class="vaga-aplicada">
+                    <div class="vaga-aplicada-info">
+                        <h3>Desenvolvedor(a) Backend Pleno (Python/Django)</h3>
+                        <p class="vaga-empresa">Nome da Empresa</p>
+                        <p class="vaga-localidade">São Paulo, SP (Híbrido)</p>
+                    </div>
+                    <div class="vaga-aplicada-status">
+                        <span class="status-tag status-analise">Em Análise</span>
+                    </div>
+                </article>
+
+                <article class="vaga-aplicada">
+                    <div class="vaga-aplicada-info">
+                        <h3>Analista de Dados Jr</h3>
+                        <p class="vaga-empresa">Outra Empresa</p>
+                        <p class="vaga-localidade">Rio de Janeiro, RJ (Remoto)</p>
+                    </div>
+                    <div class="vaga-aplicada-status">
+                        <span class="status-tag status-reprovado">Processo Encerrado</span>
+                    </div>
+                </article>
+                
+                <article class="vaga-aplicada">
+                    <div class="vaga-aplicada-info">
+                        <h3>Designer de Produto (UI/UX) Sênior</h3>
+                        <p class="vaga-empresa">Startup Inovadora</p>
+                        <p class="vaga-localidade">Qualquer Lugar (Remoto)</p>
+                    </div>
+                    <div class="vaga-aplicada-status">
+                        <span class="status-tag status-aprovado">Aprovado para Documentação</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Admissão Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

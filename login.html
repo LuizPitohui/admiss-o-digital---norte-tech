@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Admissão Digital</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo-link">
+                <h1 class="navbar-logo">Admissão Digital</h1>
+            </a>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="index.html">Ver Vagas</a></li>
+                    <li><a href="registrar.html">Criar Conta</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="form-container">
+            <form id="login-form">
+                <h2>Acessar sua Conta</h2>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full-width">Entrar</button>
+                
+                <p class="form-rodape">
+                    Não tem uma conta? <a href="registrar.html">Registre-se aqui</a>.
+                </p>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Admissão Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            // Previne o envio real do formulário
+            event.preventDefault(); 
+            
+            // Simula um "carregamento" e redireciona para a home
+            alert('Login realizado com sucesso! (Simulação)');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

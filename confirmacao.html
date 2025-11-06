@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Inscrições - Admissão Digital</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    
+    <link rel="stylesheet" href="css/forms.css"> 
+    <link rel="stylesheet" href="css/status.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo-link">
+                <h1 class="navbar-logo">Admissão Digital</h1>
+            </a>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="minhas_vagas.html">Minhas Inscrições</a></li>
+                    <li><a href="#notificacoes">Notificações</a></li>
+                    <li><a href="login.html">Perfil</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="form-container">
+            <form id="confirmacao-form">
+                
+                <div class="confirmacao-icone">
+                    <span>&#10004;</span> 
+                </div>
+
+                <h2>Candidatura Realizada!</h2>
+                
+                <p class="confirmacao-texto">
+                    Sua candidatura para a vaga de <strong>Desenvolvedor(a) Backend Pleno (Python/Django)</strong> foi enviada com sucesso.
+                </p>
+                <p class="confirmacao-texto">
+                    Você pode acompanhar o status do processo na área "Minhas Inscrições".
+                </p>
+
+                <hr class="confirmacao-divisor">
+
+                <fieldset class="fieldset-banco-talentos">
+                    <legend>Banco de Talentos</legend>
+                    <div class="form-group-checkbox">
+                        <input type="checkbox" id="banco_talentos" name="banco_talentos">
+                        <label for="banco_talentos">
+                            Desejo que meu currículo fique em seu banco de talentos para futuras oportunidades.
+                        </label>
+                    </div>
+                    <div class="form-group-checkbox">
+                        <input type="checkbox" id="lgpd_banco" name="lgpd_banco">
+                        <label for="lgpd_banco">
+                            Li e aceito o <a href="#lgpd-banco" target="_blank">Termo de Consentimento (LGPD)</a> para o Banco de Talentos.
+                        </label>
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="btn btn-primary btn-full-width">Concluir</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Admissão Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('confirmacao-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            // Simula o "Concluir" e redireciona para a tela de "Minhas Vagas"
+            alert('Configurações salvas! (Simulação)');
+            window.location.href = 'minhas_vagas.html'; // Próxima tela do fluxo
+        });
+    </script>
+</body>
+</html>

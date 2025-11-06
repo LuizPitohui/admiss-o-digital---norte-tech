@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Vagas - Admissão Digital</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <h1 class="navbar-logo">Admissão Digital</h1>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="minhas_vagas.html">Minhas Inscrições</a></li>
+                    <li><a href="notificacoes.html">Notificações</a></li>
+                    <li><a href="perfil.html">Meu Perfil</a></li>
+                    <li><a href="login.html" class="navbar-link-sair">Sair</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="filtros">
+            <h2>Encontre sua Vaga</h2>
+            <form>
+                <input type="text" placeholder="Cargo, palavra-chave...">
+                <select name="localidade">
+                    <option value="">Todas Localidades</option>
+                    <option value="sp">Manaus</option>
+                    <option value="rj">Roraima</option>
+                </select>
+                <div class="filtro-tipo">
+                    <input type="checkbox" id="pcd" name="pcd">
+                    <label for="pcd">Vagas PCD</label>
+                </div>
+                <button type="submit" class="btn">Filtrar</button>
+            </form>
+        </section>
+
+        <section class="lista-vagas">
+            <h2>Vagas Abertas</h2>
+            
+            <article class="vaga">
+                <h3>Desenvolvedor(a) Backend Pleno (Python/Django)</h3>
+                <p class="vaga-empresa">Nome da Empresa</p>
+                <p class="vaga-localidade">São Paulo, SP (Híbrido)</p>
+                <p class="vaga-descricao">Estamos buscando um desenvolvedor Python com experiência em Django para se juntar à nossa equipe...</p>
+                <a href="vaga_detalhe.html" class="btn btn-primary">Ver Detalhes</a>
+            </article>
+
+            <article class="vaga">
+                <h3>Analista de Dados Jr</h3>
+                <p class="vaga-empresa">Nome da Empresa</p>
+                <p class="vaga-localidade">Rio de Janeiro, RJ (Remoto)</p>
+                <p class="vaga-descricao">Oportunidade para analista de dados júnior com foco em BI e análise exploratória...</p>
+                <a href="vaga_detalhe.html" class="btn btn-primary">Ver Detalhes</a>
+            </article>
+
+            <article class="vaga">
+                <h3>Designer de Produto (UI/UX) Sênior</h3>
+                <p class="vaga-empresa">Nome da Empresa</p>
+                <p class="vaga-localidade">Qualquer Lugar (Remoto)</p>
+                <p class="vaga-descricao">Procuramos um designer experiente para liderar a concepção de novas funcionalidades...</p>
+                <a href="vaga_detalhe.html" class="btn btn-primary">Ver Detalhes</a>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Admissão Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    </body>
+</html>

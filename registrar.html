@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta - Admissão Digital</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo-link">
+                <h1 class="navbar-logo">Admissão Digital</h1>
+            </a>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="index.html">Ver Vagas</a></li>
+                    <li><a href="login.html">Já tenho conta</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="form-container-large">
+            <form id="register-form">
+                <h2>Crie seu Currículo Virtual</h2>
+                <p class="form-subtitulo">Os campos marcados com * são obrigatórios. </p>
+
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo * </label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email * </label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF * </label>
+                        <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Numero de Telefone * </label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco">Endereço * </label>
+                        <input type="text" id="endereco" name="endereco" placeholder="Rua, Número, Bairro, Cidade - Estado" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Crie uma Senha *</label>
+                        <input type="password" id="senha" name="senha" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Experiência Profissional</legend>
+                    <div id="lista-experiencias">
+                        </div>
+                    <button type="button" id="btn-add-experiencia" class="btn btn-secondary">
+                        + Adicionar Experiência
+                    </button>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Formação Acadêmica</legend>
+                    <div id="lista-formacao">
+                        </div>
+                    <button type="button" id="btn-add-formacao" class="btn btn-secondary">
+                        + Adicionar Formação
+                    </button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Competências</legend>
+                    <div class="form-group">
+                        <label for="competencias">Liste suas competências (separadas por vírgula)</label>
+                        <input type="text" id="competencias" name="competencias" placeholder="Ex: Python, Django, Liderança, Scrum...">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sobre Mim </legend>
+                    <div class="form-group">
+                        <textarea id="sobre_mim" name="sobre_mim" rows="5" placeholder="Fale um pouco sobre sua trajetória profissional..."></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Documentos</legend>
+                    <div class="form-group">
+                        <label for="curriculo">Upload do currículo (PDF, DOCX) * </label>
+                        <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="foto">Upload de foto do usuario </label>
+                        <input type="file" id="foto" name="foto" accept="image/png, image/jpeg">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Termos e Privacidade</legend>
+                    <div class="form-group-checkbox">
+                        <input type="checkbox" id="termos_lgpd" name="termos_lgpd" required>
+                        <label for="termos_lgpd">
+                            * Eu li, compreendo e aceito os <a href="#termos" target="_blank">Termos de Uso</a> e a 
+                            <a href="#lgpd" target="_blank">Política de Privacidade (LGPD)</a> desta plataforma.
+                        </label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary btn-full-width">Criar Conta e Salvar Currículo</button>
+                
+                <p class="form-rodape">
+                    Já tem uma conta? <a href="login.html">Acesse aqui</a>.
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Admissão Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- Lógica para Experiência ---
+            document.getElementById('btn-add-experiencia').addEventListener('click', function() {
+                const container = document.getElementById('lista-experiencias');
+                const index = container.children.length; // Conta quantos já existem
+                const novoCampo = document.createElement('div');
+                novoCampo.classList.add('form-group-dinamico');
+                
+                novoCampo.innerHTML = `
+                    <h4>Experiência ${index + 1}</h4>
+                    <input type="text" placeholder="Cargo" name="exp_cargo_${index}">
+                    <input type="text" placeholder="Empresa" name="exp_empresa_${index}">
+                    <textarea placeholder="Descrição das atividades..." name="exp_desc_${index}"></textarea>
+                    <button type="button" class="btn btn-remover">Remover</button>
+                `;
+                container.appendChild(novoCampo);
+            });
+
+            // --- Lógica para Formação ---
+            document.getElementById('btn-add-formacao').addEventListener('click', function() {
+                const container = document.getElementById('lista-formacao');
+                const index = container.children.length;
+                const novoCampo = document.createElement('div');
+                novoCampo.classList.add('form-group-dinamico');
+                
+                novoCampo.innerHTML = `
+                    <h4>Formação ${index + 1}</h4>
+                    <input type="text" placeholder="Curso" name="form_curso_${index}">
+                    <input type="text" placeholder="Instituição" name="form_inst_${index}">
+                    <select name="form_nivel_${index}">
+                        <option value="">Nível</option>
+                        <option value="tecnico">Técnico</option>
+                        <option value="graduacao">Graduação</option>
+                        <option value="pos">Pós-Graduação</option>
+                        <option value="mestrado">Mestrado</option>
+                    </select>
+                    <button type="button" class="btn btn-remover">Remover</button>
+                `;
+                container.appendChild(novoCampo);
+            });
+
+            // --- Lógica para Remover (funciona para ambos) ---
+            document.addEventListener('click', function(e) {
+                if (e.target && e.target.classList.contains('btn-remover')) {
+                    e.target.closest('.form-group-dinamico').remove();
+                }
+            });
+
+            // --- Lógica para Simular Envio ---
+            document.getElementById('register-form').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                
+                // Simula o cadastro e redireciona para o Login (conforme fluxograma)
+                alert('Cadastro realizado com sucesso! (Simulação)\nVocê será redirecionado para a tela de login.');
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* --- ESTILOS (Formulários) --- */
+.form-container,
+.form-container-large {
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.form-container {
+    max-width: 450px;
+}
+.form-container-large {
+    max-width: 800px;
+}
+
+.form-container h2,
+.form-container-large h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-subtitulo {
+    text-align: center;
+    font-size: 15px;
+    color: var(--color-text-light);
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 15px;
+}
+
+.form-group,
+.form-group-checkbox {
+    margin-bottom: 20px;
+}
+
+.form-group label,
+.form-group-checkbox label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group input[type="file"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-family: var(--font-family);
+    background-color: #fff;
+    transition: var(--transition);
+}
+
+/* Estado de Foco (Profissional) */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Sombra azul clara */
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.btn-full-width {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.form-rodape {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
+    color: var(--color-text-light);
+}
+
+/* Fieldset (Registro/Perfil) */
+fieldset {
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: #fff; /* Fundo branco para os fieldsets */
+}
+
+fieldset legend {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    padding: 0 10px;
+    margin-left: 10px; /* Pequeno ajuste */
+}
+
+/* Checkbox (LGPD) */
+.form-group-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+.form-group-checkbox input[type="checkbox"] {
+    margin-top: 5px;
+    width: 1.1rem;
+    height: 1.1rem;
+}
+.form-group-checkbox label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text-body);
+}
+
+/* Campos Dinâmicos (Registro/Perfil) */
+.btn-remover {
+    background-color: var(--color-danger);
+    color: white;
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.btn-remover:hover {
+    background-color: var(--color-danger-hover);
+}
+
+.form-group-dinamico {
+    border: 2px dashed var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 15px;
+    margin-top: 15px;
+}
+.form-group-dinamico h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.form-group-dinamico input,
+.form-group-dinamico textarea,
+.form-group-dinamico select {
+    margin-bottom: 10px;
+}

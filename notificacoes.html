@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Inscrições - Admissão Digital</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    
+    <link rel="stylesheet" href="css/forms.css"> 
+    <link rel="stylesheet" href="css/status.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo-link">
+                <h1 class="navbar-logo">Admissão Digital</h1>
+            </a>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="minhas_vagas.html">Minhas Inscrições</a></li>
+                    <li><a href="notificacoes.html" class="active">Notificações</a></li>
+                    <li><a href="perfil.html">Meu Perfil</a></li>
+                    <li><a href="login.html" class="navbar-link-sair">Sair</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="notificacoes-container">
+            <h1>Minhas Notificações</h1>
+            <p>Todas as atualizações sobre seus processos e propostas.</p>
+
+            <div class="lista-notificacoes">
+                
+                <article class="notificacao nao-lida">
+                    <div class="notificacao-tipo tipo-proposta">
+                        <span>Nova Proposta</span>
+                    </div>
+                    <div class="notificacao-conteudo">
+                        <h3>O RH da "Startup Inovadora" enviou uma proposta.</h3>
+                        <p>Olá, Candidato. Vimos seu perfil em nosso Banco de Talentos e gostaríamos de convidá-lo para um processo seletivo para a vaga de "Product Designer Pleno"...</p>
+                        <a href="proposta.html" class="btn btn-primary btn-small">Ver Proposta</a>
+                    </div>
+                    <div class="notificacao-data">
+                        <span>Hoje, 10:15</span>
+                    </div>
+                </article>
+
+                <article class="notificacao lida">
+                    <div class="notificacao-tipo tipo-status">
+                        <span>Status Atualizado</span>
+                    </div>
+                    <div class="notificacao-conteudo">
+                        <h3>Sua candidatura para "Designer de Produto (UI/UX) Sênior" avançou.</h3>
+                        <p>Parabéns! Você foi aprovado para a próxima etapa: Envio de Documentação. Por favor, acesse "Minhas Inscrições" para continuar.</p>
+                        <a href="minhas_vagas.html" class="btn btn-secondary btn-small">Ver Inscrições</a>
+                    </div>
+                    <div class="notificacao-data">
+                        <span>Ontem, 17:30</span>
+                    </div>
+                </article>
+                
+                <article class="notificacao lida">
+                    <div class="notificacao-tipo tipo-status">
+                        <span>Status Atualizado</span>
+                    </div>
+                    <div class="notificacao-conteudo">
+                        <h3>Processo encerrado para "Analista de Dados Jr".</h3>
+                        <p>Agradecemos seu interesse. No momento, não seguiremos com sua candidatura para esta vaga. Seu perfil permanece em nosso banco de talentos (se autorizado).</p>
+                    </div>
+                    <div class="notificacao-data">
+                        <span>2 dias atrás</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Admissão Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

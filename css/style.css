@@ -1,0 +1,740 @@
+/* --- RESET BÁSICO E DEFINIÇÕES GLOBAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6; /* Um cinza bem claro para o fundo */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Azul padrão para links */
+}
+
+/* --- ESTILOS DE BOTÕES --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ccc;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+/* --- 1. BARRA DE NAVEGAÇÃO (HEADER) --- */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 24px;
+    color: #333;
+}
+
+.navbar-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: #555;
+    font-weight: 500;
+}
+
+.navbar-menu a:hover {
+    color: #007bff;
+}
+
+/* --- 2.1. FILTROS --- */
+.filtros {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.filtros h2 {
+    margin-bottom: 15px;
+}
+
+.filtros form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.filtros input[type="text"],
+.filtros select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.filtro-tipo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* --- 2.2. LISTA DE VAGAS --- */
+.lista-vagas h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.vaga {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.vaga:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.vaga h3 {
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.vaga-empresa, .vaga-localidade {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.vaga-descricao {
+    margin-bottom: 15px;
+}
+
+/* --- 3. RODAPÉ --- */
+.footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    color: #888;
+}
+
+/* --- ESTILOS DE FORMULÁRIO (Login/Registro) --- */
+
+.form-container {
+    max-width: 450px; /* Define uma largura máxima para o box de login */
+    margin: 40px auto; /* Centraliza o box na tela */
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar só na vertical */
+    min-height: 80px;
+}
+
+.btn-full-width {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.form-rodape {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Adicionando um estilo para o link do logo no navbar */
+.navbar-logo-link {
+    text-decoration: none; /* Remove sublinhado do link do logo */
+}
+
+/* --- ESTILOS (Registro) --- */
+
+/* Um container maior para a página de registro */
+.form-container-large {
+    max-width: 800px; /* Mais largo que o login */
+    margin: 40px auto;
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-subtitulo {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+/* Estilo para os blocos de campos (Dados Pessoais, Experiência...) */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+fieldset legend {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    padding: 0 10px; /* Espaçamento para a legenda não colar na borda */
+}
+
+/* Botão secundário (Adicionar / Remover) */
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Botão de remover (vermelho) */
+.btn-remover {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.btn-remover:hover {
+    background-color: #c82333;
+}
+
+
+/* Estilo para os campos de checkbox (LGPD) */
+.form-group-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.form-group-checkbox input[type="checkbox"] {
+    margin-top: 5px; /* Alinha o checkbox com o texto */
+    width: auto;
+}
+.form-group-checkbox label {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Estilo para os grupos dinâmicos (Experiência/Formação) */
+.form-group-dinamico {
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 15px;
+}
+.form-group-dinamico h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.form-group-dinamico input,
+.form-group-dinamico textarea,
+.form-group-dinamico select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* --- ESTILOS (Detalhe da Vaga) --- */
+
+.vaga-detalhe-container {
+    display: grid;
+    /* Duas colunas: 2/3 para descrição, 1/3 para o botão */
+    grid-template-columns: 2fr 1fr; 
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.vaga-header {
+    /* Ocupa as duas colunas */
+    grid-column: 1 / -1; 
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+}
+.vaga-header h1 {
+    margin: 20px 0 10px 0;
+    font-size: 2.2rem;
+    color: #333;
+}
+.vaga-info-subtitulo {
+    font-size: 1.1rem;
+    color: #555;
+}
+.vaga-info-subtitulo .info-empresa {
+    font-weight: 600;
+}
+
+.vaga-descricao-full {
+    line-height: 1.7;
+}
+
+.vaga-descricao-full h2,
+.vaga-descricao-full h3 {
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.vaga-descricao-full ul {
+    list-style-position: inside;
+    margin-left: 10px;
+}
+.vaga-descricao-full li {
+    margin-bottom: 8px;
+}
+
+
+/* Bloco de Ação (Candidatar-se) */
+.vaga-acao {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    /* Faz o bloco "grudar" no topo ao rolar a página */
+    position: sticky; 
+    top: 30px; 
+    height: fit-content; /* Para o sticky funcionar */
+}
+.vaga-acao h3 {
+    margin-bottom: 10px;
+}
+.vaga-acao p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* --- AJUSTE DE RESPONSIVIDADE (para celular) --- */
+@media (max-width: 768px) {
+    .vaga-detalhe-container {
+        /* No celular, vira uma coluna única */
+        grid-template-columns: 1fr;
+    }
+    
+    .vaga-descricao-full {
+        /* A descrição vem ANTES do botão no celular */
+        order: 1;
+    }
+
+    .vaga-acao {
+        order: 2;
+        /* Tira o "grude" no celular */
+        position: static; 
+    }
+
+    .vaga-header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* --- ESTILOS (Confirmação) --- */
+
+.confirmacao-icone {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.confirmacao-icone span {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px; /* Alinha o check verticalmente */
+    font-size: 30px;
+    font-weight: bold;
+    color: #28a745; /* Verde sucesso */
+    background-color: #e9f7eb;
+    border: 2px solid #28a745;
+    border-radius: 50%; /* Deixa redondo */
+}
+
+.confirmacao-texto {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.confirmacao-divisor {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 25px 0;
+}
+
+/* Reutilizamos o 'fieldset' da página de registro, 
+  mas podemos fazer um ajuste fino. 
+*/
+.fieldset-banco-talentos {
+    border-style: solid; /* Trocamos de 'dashed' para 'solid' */
+    margin-top: 15px;
+    background-color: #fcfcfc;
+}
+.fieldset-banco-talentos legend {
+    font-size: 16px;
+}
+
+/* --- ESTILOS (Minhas Inscrições) --- */
+
+/* Destaca o link ativo no menu */
+.navbar-menu a.active {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.minhas-vagas-container h1 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.minhas-vagas-container p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.vaga-aplicada {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.vaga-aplicada-info h3 {
+    margin-bottom: 5px;
+    color: #333; /* Cor normal, não o azul de link */
+}
+
+/* --- Tags de Status --- */
+.status-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px; /* Estilo "pílula" */
+    text-transform: uppercase;
+}
+
+/* Azul - Em Análise / Em Processo */
+.status-tag.status-analise {
+    color: #004085;
+    background-color: #cce5ff;
+    border: 1px solid #b8daff;
+}
+
+/* Verde - Aprovado / Próxima Etapa  */
+.status-tag.status-aprovado {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+/* Vermelho/Cinza - Reprovado / Encerrado  */
+.status-tag.status-reprovado {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* --- AJUSTE DE RESPONSIVIDADE (para celular) --- */
+@media (max-width: 500px) {
+    .vaga-aplicada {
+        flex-direction: column; /* Empilha verticalmente */
+        align-items: flex-start; /* Alinha à esquerda */
+        gap: 15px;
+    }
+}
+
+.navbar-link-sair {
+    color: #dc3545 !important; /* Vermelho (cor do botão remover) */
+    font-weight: 500;
+}
+
+.navbar-link-sair:hover {
+    color: #c82333 !important; /* Vermelho mais escuro */
+}
+
+/* --- ESTILOS (Notificações) --- */
+
+.notificacoes-container h1 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.notificacoes-container p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.notificacao {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden; /* Garante que o 'border-left' funcione bem */
+}
+
+/* Estilo para Notificação NÃO LIDA */
+.notificacao.nao-lida {
+    background-color: #fcfdff;
+    border-left: 5px solid #007bff; /* Destaque azul */
+}
+
+/* Estilo para Notificação LIDA */
+.notificacao.lida {
+    background-color: #f9f9f9; /* Um cinza levemente mais escuro que o fundo */
+    opacity: 0.85; /* Leve transparência para indicar que foi lida */
+}
+
+.notificacao-tipo {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px; /* Largura mínima para a tag */
+}
+.notificacao-tipo span {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Cor da Tag de Status (azul) */
+.notificacao-tipo.tipo-status span {
+    background-color: #007bff;
+}
+/* Cor da Tag de Proposta (verde) */
+.notificacao-tipo.tipo-proposta span {
+    background-color: #28a745;
+}
+
+.notificacao-conteudo {
+    padding: 20px;
+    flex: 1; /* Ocupa o espaço restante */
+}
+.notificacao-conteudo h3 {
+    margin-bottom: 5px;
+    color: #333;
+}
+.notificacao-conteudo p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px; /* Resetamos o margin-bottom do P geral */
+    border: none;
+    padding: 0;
+}
+
+.notificacao-data {
+    padding: 20px;
+    text-align: right;
+    font-size: 13px;
+    color: #777;
+    min-width: 100px;
+}
+
+/* Botão pequeno para ações dentro da notificação */
+.btn-small {
+    padding: 5px 12px;
+    font-size: 13px;
+}
+
+
+/* --- AJUSTE DE RESPONSIVIDADE (para celular) --- */
+@media (max-width: 768px) {
+    .notificacao {
+        flex-direction: column;
+    }
+    .notificacao-tipo {
+        min-width: 0;
+        padding: 15px 20px 10px 20px;
+        align-items: flex-start;
+    }
+    .notificacao-conteudo {
+        padding-top: 0;
+    }
+    .notificacao-data {
+        padding: 0 20px 15px 20px;
+        text-align: left;
+    }
+}
+
+/* --- ESTILOS (Página de Proposta) --- */
+
+.proposta-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.proposta-header {
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    margin: 20px 0 30px 0;
+}
+.proposta-header h1 {
+    color: #28a745; /* Verde Sucesso */
+}
+.proposta-header p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.vaga-ofertada h2 {
+    margin-bottom: 5px;
+}
+.vaga-ofertada h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Estilo para a citação/mensagem do RH */
+.mensagem-rh {
+    background-color: #f4f7f6; /* Fundo cinza claro */
+    border-left: 5px solid #007bff; /* Borda azul */
+    padding: 15px 20px;
+    margin: 10px 0;
+    font-style: italic;
+    color: #444;
+}
+
+.proposta-acoes {
+    text-align: center;
+    border-top: 2px solid #eee;
+    padding-top: 25px;
+    margin-top: 30px;
+}
+.proposta-acoes h3 {
+    margin-bottom: 20px;
+}
+.proposta-acoes form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Para celulares */
+}
+
+.btn-large {
+    padding: 12px 25px;
+    font-size: 16px;
+}
+
+/* Botão de Rejeitar (similar ao Sair) */
+.btn-rejeitar {
+    background-color: #dc3545;
+    color: white;
+}
+.btn-rejeitar:hover {
+    background-color: #c82333;
+}

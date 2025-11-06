@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe da Vaga - Admissão Digital</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/vaga.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo-link">
+                <h1 class="navbar-logo">Admissão Digital</h1>
+            </a>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="minhas_vagas.html">Minhas Inscrições</a></li>
+                    <li><a href="notificacoes.html" class="active">Notificações</a></li>
+                    <li><a href="perfil.html">Meu Perfil</a></li>
+                    <li><a href="login.html" class="navbar-link-sair">Sair</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="proposta-container">
+            <a href="notificacoes.html" class="btn btn-secondary">&larr; Voltar para Notificações</a>
+            
+            <header class="proposta-header">
+                <h1>Você recebeu uma proposta!</h1>
+                <p>O RH da <strong>"Startup Inovadora"</strong> analisou seu perfil no Banco de Talentos e tem interesse em você para uma nova oportunidade.</p>
+            </header>
+
+            <article class="vaga-ofertada">
+                <h2>Vaga Ofertada: Product Designer Pleno</h2>
+                <p class="vaga-info-subtitulo">
+                    <span class="info-empresa">Startup Inovadora</span> | 
+                    <span class="info-localidade">Qualquer Lugar (Remoto)</span>
+                </p>
+
+                <h3>Mensagem do RH:</h3>
+                <blockquote class="mensagem-rh">
+                    "Olá, Candidato. Vimos seu perfil em nosso Banco de Talentos e gostaríamos de convidá-lo para um processo seletivo para a vaga de 'Product Designer Pleno'. Seu portfólio e experiência parecem se encaixar perfeitamente no que buscamos.
+                    <br><br>
+                    Por favor, aceite esta proposta para iniciar o processo."
+                </blockquote>
+
+                <h3>Descrição da Vaga</h3>
+                <p>Procuramos um Designer de Produto (UI/UX) com mentalidade criativa e foco no usuário para nos ajudar a construir a próxima geração de nossas ferramentas...</p>
+                </article>
+
+            <footer class="proposta-acoes">
+                <h3>Você tem interesse nesta oportunidade?</h3>
+                <form id="proposta-form">
+                    <button type"submit" class="btn btn-primary btn-large">Sim, tenho interesse (Aceitar)</button>
+                    <button type"button" class="btn btn-rejeitar btn-large">Não, obrigado (Recusar)</button>
+                </form>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Admissão Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('proposta-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            // Simula o "Aceite"
+            alert('Proposta aceita com sucesso! (Simulação)\nA vaga agora aparecerá em "Minhas Inscrições".');
+            window.location.href = 'minhas_vagas.html';
+        });
+
+        // Adiciona evento para o botão de recusar
+        document.querySelector('.btn-rejeitar').addEventListener('click', function() {
+            alert('Proposta recusada. (Simulação)');
+            window.location.href = 'notificacoes.html'; // Volta para notificações
+        });
+    </script>
+</body>
+</html>

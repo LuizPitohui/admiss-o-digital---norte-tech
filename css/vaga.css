@@ -1,0 +1,139 @@
+/* --- ESTILOS (Detalhe Vaga) --- */
+.vaga-detalhe-container {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr; /* Mais espaço para descrição */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.vaga-header {
+    grid-column: 1 / -1;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 20px;
+}
+.vaga-header h1 {
+    margin: 20px 0 10px 0;
+    font-size: 2.2rem;
+}
+.vaga-info-subtitulo {
+    font-size: 1.1rem;
+    color: var(--color-text-body);
+    font-weight: 500;
+}
+.vaga-info-subtitulo .info-empresa {
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.vaga-descricao-full {
+    line-height: 1.7;
+}
+.vaga-descricao-full h2,
+.vaga-descricao-full h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.vaga-descricao-full ul {
+    list-style-position: inside;
+    margin-left: 10px;
+}
+.vaga-descricao-full li {
+    margin-bottom: 8px;
+}
+
+/* Bloco Ação (Candidatar-se) */
+.vaga-acao {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow-md);
+    position: sticky; 
+    top: 30px; 
+    height: fit-content;
+}
+.vaga-acao h3 {
+    margin-bottom: 10px;
+}
+.vaga-acao p {
+    font-size: 15px;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+}
+
+/* --- ESTILOS (Página de Proposta) --- */
+.proposta-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 30px 40px;
+    box-shadow: var(--shadow-md);
+}
+.proposta-header {
+    text-align: center;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 20px;
+    margin: 20px 0 30px 0;
+}
+.proposta-header h1 {
+    color: var(--color-success);
+}
+.proposta-header p {
+    font-size: 1.1rem;
+    color: var(--color-text-body);
+    margin-top: 10px;
+}
+.vaga-ofertada h2 {
+    margin-bottom: 5px;
+}
+.vaga-ofertada h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.mensagem-rh {
+    background-color: var(--color-bg);
+    border-left: 5px solid var(--color-primary);
+    padding: 15px 20px;
+    margin: 10px 0;
+    font-style: italic;
+    color: var(--color-text-body);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+.proposta-acoes {
+    text-align: center;
+    border-top: 2px solid var(--color-border);
+    padding-top: 25px;
+    margin-top: 30px;
+}
+.proposta-acoes h3 {
+    margin-bottom: 20px;
+}
+.proposta-acoes form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.btn-large {
+    padding: 12px 25px;
+    font-size: 16px;
+}
+.btn-rejeitar {
+    background-color: var(--color-danger);
+    color: white;
+}
+.btn-rejeitar:hover {
+    background-color: var(--color-danger-hover);
+}
+
+/* --- RESPONSIVIDADE (Vaga/Proposta) --- */
+@media (max-width: 768px) {
+    .vaga-detalhe-container {
+        grid-template-columns: 1fr;
+    }
+    .vaga-descricao-full { order: 1; }
+    .vaga-acao { order: 2; position: static; }
+    .vaga-header h1 { font-size: 1.8rem; }
+}

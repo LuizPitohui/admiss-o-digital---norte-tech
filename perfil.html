@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - Admissão Digital</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo-link">
+                <h1 class="navbar-logo">Admissão Digital</h1>
+            </a>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="index.html">Ver Vagas</a></li>
+                    <li><a href="minhas_vagas.html">Minhas Inscrições</a></li>
+                    <li><a href="login.html" class_="navbar-link-sair">Sair</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="form-container-large">
+            <form id="profile-form">
+                <h2>Editar Perfil / Currículo Virtual</h2>
+                <p class="form-subtitulo">Atualize suas informações pessoais e profissionais.</p>
+
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" value="Candidato de Exemplo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" value="candidato@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF *</label>
+                        <input type="text" id="cpf" name="cpf" value="123.456.789-00" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Numero de Telefone *</label>
+                        <input type="tel" id="telefone" name="telefone" value="(11) 98765-4321" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="endereco">Endereço *</label>
+                        <input type="text" id="endereco" name="endereco" value="Rua das Flores, 123, São Paulo - SP" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="senha">Alterar Senha (deixe em branco para não mudar)</label>
+                        <input type="password" id="senha" name="senha">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Experiência Profissional</legend>
+                    <div id="lista-experiencias">
+                        <div class="form-group-dinamico">
+                            <h4>Experiência 1</h4>
+                            <input type="text" placeholder="Cargo" name="exp_cargo_0" value="Desenvolvedor Python">
+                            <input type="text" placeholder="Empresa" name="exp_empresa_0" value="Empresa Fictícia">
+                            <textarea placeholder="Descrição das atividades..." name="exp_desc_0">Desenvolvimento de APIs com Django Rest Framework.</textarea>
+                            <button type="button" class="btn btn-remover">Remover</button>
+                        </div>
+                    </div>
+                    <button type="button" id="btn-add-experiencia" class="btn btn-secondary">
+                        + Adicionar Nova Experiência
+                    </button>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Formação Acadêmica</legend>
+                    <div id="lista-formacao">
+                         <div class="form-group-dinamico">
+                            <h4>Formação 1</h4>
+                            <input type="text" placeholder="Curso" name="form_curso_0" value="Análise de Sistemas">
+                            <input type="text" placeholder="Instituição" name="form_inst_0" value="Universidade Exemplo">
+                            <select name="form_nivel_0">
+                                <option value="graduacao" selected>Graduação</option>
+                                <option value="tecnico">Técnico</option>
+                                <option value="pos">Pós-Graduação</option>
+                            </select>
+                            <button type="button" class="btn btn-remover">Remover</button>
+                        </div>
+                    </div>
+                    <button type="button" id="btn-add-formacao" class="btn btn-secondary">
+                        + Adicionar Nova Formação
+                    </button>
+                </fieldset>
+
+                <button type="submit" class="btn btn-primary btn-full-width">Salvar Alterações</button>
+                
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Admissão Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Lógica para Experiência ---
+            document.getElementById('btn-add-experiencia').addEventListener('click', function() { /* ... (código igual ao de registrar.html) ... */ });
+            // --- Lógica para Formação ---
+            document.getElementById('btn-add-formacao').addEventListener('click', function() { /* ... (código igual ao de registrar.html) ... */ });
+            // --- Lógica para Remover (funciona para ambos) ---
+            document.addEventListener('click', function(e) { if (e.target && e.target.classList.contains('btn-remover')) { e.target.closest('.form-group-dinamico').remove(); } });
+
+            // --- Lógica para Simular Envio ---
+            document.getElementById('profile-form').addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                alert('Perfil atualizado com sucesso! (Simulação)');
+                // Apenas recarrega a página para mostrar que salvou
+                window.location.reload();
+            });
+        });
+    </script>
+</body>
+</html>
